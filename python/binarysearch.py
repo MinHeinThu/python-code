@@ -12,7 +12,7 @@ def binary_search(arr, target):
         elif target > arr[M]:
             L = M + 1
         else:
-            R = M -1
+            R = M - 1
     # if element is not found
     return False
 if __name__ == "__main__":
