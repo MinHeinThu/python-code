@@ -12,7 +12,6 @@ def quick_sort(arr):
 
     L = [x for x in arr[:-1] if x <= p]
     R = [x for x in arr[:-1] if x > p]
-    print(L, R)
 
     L = quick_sort(L)
     R = quick_sort(R)

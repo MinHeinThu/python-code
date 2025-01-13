@@ -1,12 +1,6 @@
 # Function to variable
 
 
-
-
-from curses.panel import update_panels
-from email import header
-
-
 def plus_one(number):
     return number + 1
 

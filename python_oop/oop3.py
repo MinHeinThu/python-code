@@ -46,11 +46,7 @@ class Person:
         self.lname = lname
 
     def printname(self):
-        print(self.fname +" "+ self.lname)
-
-
-
-
+        print(self.fname, self.lname)
 
 # Child class
 class Student(Person):
@@ -73,7 +69,7 @@ class Student(Person):
         return self.fname + self.mname + self.lname 
 p1 = Person("Min","Heinthu")
 p1.printname()
-s1 = Student("Saw", "Yu", "Mon")
+s1 = Student("people", "code", "python")
 print(s1)
 s1.request()
 
