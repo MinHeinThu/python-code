@@ -34,7 +34,7 @@ for u,v in A:
     # Uncomment the following line if the graph is underected
     # D[v].append(u)
 
-print(D)
+
 
 # DFS with Recursion - O(V + E) Where V is the number of nodes and E is the number of edges
 
