@@ -192,7 +192,7 @@ def count_sort(arr):
 
     k = max(arr)
 
-    count = [o] * (k + 1)
+    count = [0] * (k + 1)
 
     for x in arr:
         count[x] += 1
