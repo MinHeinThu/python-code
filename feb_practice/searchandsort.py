@@ -187,3 +187,22 @@ if __name__ == "__main__":
 
 
 
+def count_sort(arr):
+    n = len(arr)
+
+    k = max(arr)
+
+    count = [o] * (k + 1)
+
+    for x in arr:
+        count[x] += 1
+
+    i = 0
+
+    for c in range(k+1):
+        while count[c] > 0:
+            arr[i] = c
+            i += 1
+            count[c] -= 1
+
+
