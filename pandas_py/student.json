@@ -1,0 +1,41 @@
+{
+    "students": [
+      {
+        "id": 1,
+        "name": "Alice Johnson",
+        "age": 20,
+        "email": "alice@example.com",
+        "courses": ["Math", "Physics", "Computer Science"],
+        "grades": {
+          "Math": 85,
+          "Physics": 90,
+          "Computer Science": 95
+        }
+      },
+      {
+        "id": 2,
+        "name": "Bob Smith",
+        "age": 22,
+        "email": "bob@example.com",
+        "courses": ["Biology", "Chemistry", "Statistics"],
+        "grades": {
+          "Biology": 78,
+          "Chemistry": 82,
+          "Statistics": 88
+        }
+      },
+      {
+        "id": 3,
+        "name": "Charlie Brown",
+        "age": 21,
+        "email": "charlie@example.com",
+        "courses": ["English", "History", "Philosophy"],
+        "grades": {
+          "English": 92,
+          "History": 85,
+          "Philosophy": 89
+        }
+      }
+    ]
+  }
+  
