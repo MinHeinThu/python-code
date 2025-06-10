@@ -1,0 +1,45 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# OS/Editor junk
+.DS_Store
+Thumbs.db
+
+# Bytecode files
+__pycache__/
+*.pyc
+
+# Virtual environment
+env/
+venv/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+# Object files
+*.o
+
+# Executables
+*.exe
+*.out
+
+# Build folder
+build/
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -17,8 +17,9 @@ class Car(Vehicle):
         print(f"Car Brand: {self.brand}, Plate Number: {self.plate_number}")
 
 class City:
-    def __init__(self, name):
+    def __init__(self, name, population):
         self.name = name # City has its own identity
+        self.population = population
     
 class Rider:
     def __init__(self, name, city):
@@ -27,7 +28,7 @@ class Rider:
     
     def show_location(self):
         print(f"Rider name: {self.name}")
-        print(f"City: {self.city.name}")
+        print(f"City: {self.city.population}")
 
 class Driver:
     def __init__(self, name):
@@ -51,10 +52,10 @@ class Trip:
         print("-- Trip End ---\n")
 
 # Step 1: Create a City
-bangkok = City("Bangkok")
+bangkok = City("Bangkok", 1000000)
 
 # Step 2: CReate A Rider and assgn a City
-rider = Rider("Ali", "Bangkok")
+rider = Rider("Ali", bangkok)
 
 # Step 3: Create a Driver
 driver = Driver("Ahmed")

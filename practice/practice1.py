@@ -1,53 +1,51 @@
-import heapq
-if __name__ == "__main__":
+# this practice is crror handling in python
+"""
 
-    # Min heap
-    a = [1, 3, -2, 4, 2, -2, 0]
+There are two main types of errors in pyhont:
+1. Syntax Error : This happen when you break the rule of the python code
 
-    heapq.heapify(a) # O(n
-    print(a)
+2. Runtime Error (Ecception)
+A runtime error happens when your code runs correctly at first, but something goes wrong while it's running
 
-    heapq.heappush(a, 3) # T : log(n)
-    print(a)
+' A type of error that occurs during program execution'
 
-    heapq.heappop(a) # log n
-    print(a)
+"""
 
-    # peak the min Time : O(1)
-    print(a[0])
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print("Result: ","%.2f"  % result)
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+finally:
+    print("Program ended.")
+
+""" Raise keyword is use when we want to coutomize the error """
+
+age = int(input("Enter your age: "))
+
+if age < 0:
+    raise ValueError("Age should not be negative")
+else:
+    print("Your age is:", age)
 
 
-# Time : O(n log n), Space : O(n)
-def heap_sort(arr):
-    n = len(arr)
-    heapq.heapify(arr)
-    sorted_arr = [0] * n
-    for i in range(n):
-        minn = heapq.heappop(arr)
-        sorted_arr[i] = minn
-    return sorted_arr
-if __name__ == "__main__":
-    a = [1, 3, -2, 4, 2, -2, 0]
-    print(heap_sort(a))
-# Max heap
-    b = [-3, 9, 5, 0, 2, 1]
+# Error handling  Inside a class
+class Student:
+    def __init__(self, name, marks):
+        if marks < 0:
+            raise ValueError("Marks is no negative")
+        else:
+            self.marks = marks
+        self.marks = marks
+try:
+    s1 = Student("Ali", -20)
+except ValueError as e:
+    print("Error:", e)
 
-    n = len(b)
-    for i in range(n):
-        b[i] = -b[i]
-    
-    heapq.heapify(b)
-    print(b)
-    largest = -heapq.heappop(b)
-    print(largest)
+class InvalidMarksError(Exception):
+    pass
 
-    c = [1, 3, 5, 6, 7, -4, 2]
-
-    heap = []
-    for i in c:
-        heapq.heappush(heap, i)
-    print(heap)
-    
-    # Heap puhspop, Time: O(log n) , Space: O(1)
-    heapq.heappushpop(c, 2)
-    print(c)
+class Score:
+    def __init__(self, score):
+        pass

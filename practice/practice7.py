@@ -1,23 +1,38 @@
-# Max heap, heapify T: O(n)
-def heapify(arr):
-    n = len(arr)
-    def sift_down(start, end):
-        root = start
-        while True:
-            child = 2 * root + 1
-            if child > end:
-                break
-            if child + 1 <= end and arr[child] < arr[child + 1]:
-                child += 1
-            if arr[root] < arr[child]:
-                arr[root], arr[child] = arr[child], arr[root]
-                root = child
-            else:
-                break
+# class Student:
+#     school_name = "Green School"
 
-    for start in range(n // 2 - 1, -1, -1):
-        sift_down(start, n - 1)
-if __name__ == "__main__":
-    A = [1, -4, -3, 0, 2, 3]
-    heapify(A)
-    print(A)
+#     def __init__(self, name):
+#         self.name = name
+
+#     @classmethod
+#     def get_school(cls):
+#         print("School name is: ",cls.school_name)
+
+# Student.get_school()
+
+class Student:
+    def __init__(self, name, grade):
+        self.name = name
+        self.grade = grade
+
+    def save(self):
+        try:
+            with open("student1.txt", "a") as file:
+                file.write(f"{self.name},{self.grade}\n")
+        except Exception as e:
+            print("Failed to save student:", e)
+
+    @staticmethod
+    def display_all():
+        try:
+            with open("student1.txt", "r") as file:
+                # print("All students: ")
+                for line in file:
+                    name, grade = line.strip().split(",")
+                    print(f"Name: {name}, Grade: {grade}")
+        except FileNotFoundError:
+            print("No students records found.")
+
+s1 = Student("Jack", "12")
+s1.save()
+Student.display_all()

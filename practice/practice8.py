@@ -1,35 +1,48 @@
-#Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-    def addTwoNumbers(self, l1 , l2):
-        l1, l2 = list(l1), list(l2)
-        lst1 = []
-        lst2 = []
-        for i in range(len(l1)):
-            lst1.append(l1[i])
-        for i in range(len(l2)):
-            lst2.append(l2[i])
-        res = ''.join(map(str, lst1))
-        res1 = ''.join(map(str, lst2))
-        add = int(res)+ int(res1)
-        result1 = []
-        result = str(add)
-        for i in result[::-1]:
-            result1.append(int(i))
-        print(result1)
+class School:
+    def __init__(self, name):
+        self.name = name
 
-        
-
-
-
+    def get_info(self):
+        return f"The School Name: {self.name}"
     
+school = School("Krirk University")
+
+print(school.get_info())
+
+# 2. Abstract Class: Person
+from abc import ABC, abstractmethod
+# -Inherit from ABC (from abc module)
+class Person(ABC):
+    def __init__(self, name: str, email: str, contact: str):
+        self.name = name
+        self._email = email
+        self.__contact = contact
+# - Attributes:
+# -name (string)
+# email (protected)
+# contact (private)
+
+# - Methods:
+
+# -set contact(contact) - validates that the contact number is exactly 11 digits. Raise a ValueError
+    def set_contact(self, contact):
+        if len(contact) == 11:
+            self.__contact = contact
+        else:
+            raise ValueError("contact must be 11 digits")
         
-l1 = [9,9,9,9,9,9,9]
-l2 = [9,9,9,9]
+    @property
+    def get_contact(self):
+        return self.__contact
 
-list1 = ListNode([x for x in l1])
+# if invalid
 
-list1.addTwoNumbers(l1,l2)
+# contact-use the @property decorator to access the private contact
+
+# -show role()-abstract method to be implemented by subclasses
+    @abstractmethod
+    def show_role(self):
+        pass
+
+# person1 = Person("ja", "something@email", "00938474743")
 
