@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="box-border">
+    <!-- <button class="flex text-center border-1 border-solid border-green-300 align-center position-center">
+        <a href="play_ground.html">Go To The main page</a>
+    </button> -->
+    <section class="m-50 flex justify-self-center justify-items-center rounded-2xl backdrop-blur-xs">
+        <!-- <div class="flex flex-col items-center space-y-8 p-6 bg-white rounded-xl shadow-lg w-full max-w-md mt-20"> -->
+            <fieldset class="min-w-100 min-h-90 max-w-md max-h-120 bg-white rounded-xl shadow-2xl w-full">
+                <legend class="text-center mb-5">Welcome Back</legend>
+                <form  id="loginForm" class="flex flex-col justify-items-center justify-between flex-nowrap">
+                    <input class="basis-10 bg-green-100 mx-10 my-3 text-center text-stone-950 justify-self-center invalid:text-stone-950 border-b-2 hover:border-0 hover:text-zinc-950" id="email" type="text" placeholder="Email or mobile Number"><br>
+                    <input class="basis-10 bg-green-100 text-center mx-10 my-3 text-stone-950 border-b-2 hover:border-0" type="password" id="password" placeholder="Password"><br>
+                    <button class="basis-10 text-center mx-10 my-3 rounded-2xl bg-sky-500 text-stone-50 hover:bg-sky-700" type="submit">Log in</button>
+                </form>
+                <!-- <a class="mx-10 my-5 hover:text-blue-900 w-full text-center p-20" href="#">Forgotten password?</a>
+                <hr class="mt-10"> -->
+                <p id="output" class="text-center text-green-600"></p>
+                <p id="passwordError" class="text-center text-red-600"></p>
+            </fieldset>
+        <!-- </div> -->
+    </section>
+
+    <script>
+        const form = document.getElementById("loginForm");
+        const output = document.getElementById("output");
+        const passwordError = document.getElementById("passwordError");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+
+
+            if (password === "" || email === ""){
+                output.textContent ="Please fill out all fields!";
+                output.style.color = "red";
+                passwordError.textContent = "";
+                return;
+            }
+
+            if (password.length < 8) {
+                passwordError.textContent = "Password must be at least 8 characters";
+                output.textContent = "";
+                passwordError.style.color = "red";
+                return;
+            } else {
+                passwordError.textContent="";
+            }
+            const username = email.split("@");
+            output.textContent = `Welcome, ${username[0].toUpperCase()}!`;
+            output.style.color = "green";
+
+            email = "";
+            password = "";
+        });
+    </script>
+</body>
+</html>

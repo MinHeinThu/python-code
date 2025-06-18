@@ -1,0 +1,32 @@
+def getRemovableIndices(str1='abdgggda', str2='abdggda'):
+    # Write your code here
+    set_change_str2 = list(set(str2))
+    set_change_str1 = list(set(str1))
+    # print(set_change_str1,set_change_str2)
+
+    # 
+    empty_key = dict.fromkeys(set_change_str2, 0)
+    # print(empty_key)
+    # print(type(empty_key))
+
+    # for key, value in empty_key.items():
+    #     print(type(key), value)
+    for x in str1:
+        # print(type(x))
+        if x in empty_key:
+            empty_key[x] += 1
+            # print(type(empty_key[x]))
+    print(empty_key)
+    
+    if set_change_str1 == set_change_str2:
+        pass
+
+
+        # print(empty_key)
+        
+
+    # dict_ready = dict(key_maker)
+    # print(dict_ready)
+
+getRemovableIndices()
+    

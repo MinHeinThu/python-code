@@ -13,7 +13,7 @@
     </h1>
     <h2 class="text-center text-stone-900 bg-green-300 m-5">This for flex display</h2>
     <div>
-        <div class="table w-full bg-gray-800 text-neutral-50 m-5">
+        <div class="table m-4 bg-gray-800 text-neutral-50">
             <div class="table-header-group">
                 <div class="table-row">
                     <div class="table-cell text-center">Property</div>
@@ -52,9 +52,21 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row-reverse flex-warp justify-center gap-10">
-        <div class="bg-pink-500">1</div>
-        <div class="bg-pink-500">2</div>
+    <div class="flex flex-warp justify-center gap-2 m-4">
+        <div class="bg-pink-500 basis-sm">1</div>
+        <div class="bg-pink-500 basis-2xs">2</div>
+        <div class="bg-pink-500 basis-2xs">3</div>
+        <div class="bg-pink-500 basis-2xs">4</div>
+        <div class="bg-pink-500 basis-2xs">5</div>
+        <div class="bg-pink-500 basis-xs">6</div>
+        <div class="bg-pink-500 basis-sm">7</div>
+        <div class="bg-pink-500 basis-sm">8</div>
+        <div class="bg-pink-500 basis-sm">9</div>
+    </div>
+    <h2 class="text-center text-stone-900 bg-green-300 m-5">This for grid diaplay</h2>
+    <div class="grid  gap-4 grid-rows-4">
+        <div class="bg-pink-500 order-9">1</div>
+        <div class="bg-pink-500 col-span-2 order-4">2</div>
         <div class="bg-pink-500">3</div>
         <div class="bg-pink-500">4</div>
         <div class="bg-pink-500">5</div>
@@ -63,18 +75,10 @@
         <div class="bg-pink-500">8</div>
         <div class="bg-pink-500">9</div>
     </div>
-    <h2 class="text-center text-stone-900 bg-green-300 m-5">This for grid diaplay</h2>
-    <div>
-        <div class="grid">
-        <div class="bg-pink-500">1</div>
-        <div class="bg-pink-500">2</div>
-        <div class="bg-pink-500">3</div>
-        <div class="bg-pink-500">4</div>
-        <div class="bg-pink-500">5</div>
-        <div class="bg-pink-500">6</div>
-        <div class="bg-pink-500">7</div>
-        <div class="bg-pink-500">8</div>
-        <div class="bg-pink-500">9</div>
+    <div class="flex justify-normal bg-green-100">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div> 
     </div>
 </body>
 </html>
