@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Ground 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="box-border p-0 m-0">
+    <h1 class="text-center text-stone-100 bg-emerald-500 m-5">This is the second play ground for tailwind css</h1>
+    <h1 class="text-center text-stone-50 bg-pink-300 m-5">
+        <a href="play_ground.html">This is the main page link</a>
+    </h1>
+    <h2 class="text-center text-stone-900 bg-green-300 m-5">This for flex display</h2>
+    <div>
+        <div class="table m-4 bg-gray-800 text-neutral-50">
+            <div class="table-header-group">
+                <div class="table-row">
+                    <div class="table-cell text-center">Property</div>
+                    <div class="table-cell text-center">Description</div>
+                </div>
+            </div>
+            <div class="table-row-group">
+                <div class="table-row">
+                    <div class="table-cell text-left">Display: flex/inline flex</div>
+                    <div class="table-cell text-left">Defines a flex container</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">flex-direction</div>
+                    <div class="table-cell text-left">Direction of main axis (row, row-reverse, column, column-reverse)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">flex-warp</div>
+                    <div class="table-cell text-left">Whether items wrap (nowrap, wrap, wrap-reverse)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">flex-flow</div>
+                    <div class="table-cell text-left">horthand for flex-direction and flex-wrap</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">justify-content</div>
+                    <div class="table-cell text-left">Align items along main axis (flex-start, flex-end, center, space-between, space-around, space-evenly)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">align-items</div>
+                    <div class="table-cell text-left">	Align items on cross axis (stretch, flex-start, flex-end, center, baseline)</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell text-left">gap / row-gap / column-gap</div>
+                    <div class="table-cell text-left">Spacing between items</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-warp justify-center gap-2 m-4">
+        <div class="bg-pink-500 basis-sm">1</div>
+        <div class="bg-pink-500 basis-2xs">2</div>
+        <div class="bg-pink-500 basis-2xs">3</div>
+        <div class="bg-pink-500 basis-2xs">4</div>
+        <div class="bg-pink-500 basis-2xs">5</div>
+        <div class="bg-pink-500 basis-xs">6</div>
+        <div class="bg-pink-500 basis-sm">7</div>
+        <div class="bg-pink-500 basis-sm">8</div>
+        <div class="bg-pink-500 basis-sm">9</div>
+    </div>
+    <h2 class="text-center text-stone-900 bg-green-300 m-5">This for grid diaplay</h2>
+    <div class="grid  gap-4 grid-rows-4">
+        <div class="bg-pink-500 order-9">1</div>
+        <div class="bg-pink-500 col-span-2 order-4">2</div>
+        <div class="bg-pink-500">3</div>
+        <div class="bg-pink-500">4</div>
+        <div class="bg-pink-500">5</div>
+        <div class="bg-pink-500">6</div>
+        <div class="bg-pink-500">7</div>
+        <div class="bg-pink-500">8</div>
+        <div class="bg-pink-500">9</div>
+    </div>
+    <div class="flex justify-normal bg-green-100">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div> 
+    </div>
+</body>
+</html>

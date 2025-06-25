@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="para"></p>
+    <div>
+        <h2>Hello World</h2>
+        <h2>Min ga lar bar</h2>
+    </div>
+    <h2 class="second-heading"></h2>
+    <script>
+        const para = document.getElementById("para"); // access the element by Id
+        // find elements by tag name
+        const div = document.getElementsByTagName("div")[0];
+
+        // Change the inner html of an element
+        para.innerHTML = "This is the paragraph"; 
+
+        // Change the style of an html element
+        para.style.color = 'green';
+
+        // element.atttribue = new value : change the value of an html element
+
+        // Change the attribute value of an html element
+        para.setAttribute('id', "paragraph");
+
+        // Get the attribute value of an html element
+        para.getAttribute('id');
+
+        // Adding and Deleting Elements
+
+        // document.createElement(element) : Create an Html element
+        const heading = document.createElement('h1');
+
+        // document.appendChild(element) : Add an html element
+        heading.textContent = "This is the dom heading";
+        div.appendChild(heading);
+
+
+
+    </script>
+</body>
+</html>

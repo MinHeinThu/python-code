@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom part 4</title>
+</head>
+<body>
+    <p id="welcome-text">Hello</p>
+    <button id="change-text-btn">Click Me</button>
+
+    <br><br>
+
+    <input type="text" id="color-input" placeholder="Enter a color"><br>
+    <button id="apply-color">Apply</button>
+
+    <br><br>
+
+    <input type="text" id="name-input">
+    <button id="submit-button">Submit</button>
+    <br>
+    <p id="error-msg" style="color: red;"></p>
+
+    <script>
+        const welcomeText = document.getElementById("welcome-text");
+        const changeTextBtn = document.getElementById("change-text-btn");
+
+        changeTextBtn.addEventListener("click", () => {
+            welcomeText.textContent = "Welcome";
+        });
+
+        const colorInput = document.getElementById("color-input");
+        const applyColor = document.getElementById("apply-color");
+
+        applyColor.addEventListener("click", function() {
+            document.body.style.backgroundColor = colorInput.value;
+        });
+        
+        const nameInput = document.getElementById('name-input');
+        const submitButton = document.getElementById('submit-button');
+        const errorMsg = document.getElementById('error-msg');
+
+        submitButton.addEventListener('click', () => {
+            if (nameInput.value.length < 4) {
+                errorMsg.textContent = "Name must be at least 4 characters";
+            } else {
+                errorMsg.textContent = "";
+            }
+        });
+    </script>
+</body>
+</html>

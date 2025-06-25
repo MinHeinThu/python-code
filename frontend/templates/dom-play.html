@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1 id="main-heading">Welcome to JavaScript DOM</h1>
+
+    <input type="text" id="name-input" placeholder="Type your name">
+    <p id="name-output">Your name will appear here</p>
+
+    <button id="change-bth">Click Me</button>
+    <button id="change-bth">Toogle highlight</button>
+
+    <script>
+        const heading = document.getElementById('main-heading');
+        const input = decument.getElementById('name-input');
+        const output = document.getElementById('name-output');
+        const changeBtn = document.getElementById('change-btn');
+        const toogleBtn = Document.getElementById('toogle-btn');
+
+        // Change heading text on button click
+        changeBtn.addEventListener('click', () => {
+            heading.textContent = 'You clicked the button!';
+            heading.styel.color = 'blue';
+            // alert("Button clicked!");
+        });
+
+        // Toggle class on heading
+        toogleBtn.addEventListener('click', () => {
+            heading.classList('hightlight');
+        });
+
+        // Live update from input field
+        input.addEventListener('input', () => {
+            const value = input.value;
+            output.textContent = vlaue ? `Hello, ${value}!` : 'Your name will appear here';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM w3shools</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh; /* Make body at least viewport height */
+            margin: 0;
+            transition: background-color 0.5s ease; /* Smooth transition for color change */
+        }
+        button,p {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="change-btn">Change</button>
+    <div>
+        <p id="number" style="text-align: center;">0</p>
+        <button id="add">+</button>
+        <button id="minus">-</button>
+    </div>
+<!-- 
+    <script>
+        const changeBackgroundColor = document.getElementById("change-btn");
+
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+
+        const continne = changeBackgroundColor.addEventListener('click', () => {
+            document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+            const btn = document.createElement('button');
+            btn.id = "change-btn";
+            btn.textContent = "Click Again";
+            // document.body.style.backgroundColor = "rgb("+ r + "," + g + ","+ b + ")";
+        });
+
+
+        // while (true) {
+        //     continue
+        // }
+    </script> -->
+
+    <script>
+        // Get a reference to the button once the DOM is loaded
+        const changeBackgroundColorBtn = document.getElementById("change-btn");
+
+        // Check if the button exists before adding an event listener
+        if (changeBackgroundColorBtn) {
+            changeBackgroundColorBtn.addEventListener('click', () => {
+                // Generate new random colors *every time the button is clicked*
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+
+                // Apply the new random background color to the body
+                document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+
+                // Change the text content of the *existing* button
+                // changeBackgroundColorBtn.textContent = "Click Again!";
+            });
+        } else {
+            console.error("Error: Button with ID 'change-btn' not found in the HTML.");
+        }
+
+        const number = document.getElementById("number");
+        const minus = document.getElementById("minus");
+        const add = document.getElementById("add");
+        // const numberValue = 0;
+        const addValue = "plus";
+        const minusValue = "minus";
+        // addValue = add.value;
+        // minusValue = minus.value;
+        
+
+        // if (number) {
+        //     if (add.textContent === "+") {
+        //         add.addEventListener("click", () => {
+        //             number.textContent = Number(number.textContent) + 1;
+        //         });
+        //     }
+        //     if (minus.textContent === "-") {
+        //         minus.addEventListener("click", () => {
+        //         number.textContent = Number(number.textContent) - 1;
+        //         return
+        //         }); 
+        //     }
+        // }
+       // Convert once to number and update accordingly
+        add.addEventListener("click", () => {
+            number.textContent = Number(number.textContent) + 1;
+            // if (Number.textContent.value.length > 5){
+
+            // }
+        });
+
+        minus.addEventListener("click", () => {
+            number.textContent = Number(number.textContent) - 1;
+        });
+
+        
+    </script>
+</body>
+</html>

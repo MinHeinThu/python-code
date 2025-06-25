@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dom part 3</title>
+</head>
+<body>
+    <h1 class="text-center text-gray-500 mt-5">DOM Properties & Methods (Reading & Writing)</h1>
+    <ul class="m-10 text-green-600 list-disc">
+        <li class="list-disc">.textContent - read/write text</li>
+        <li>.innerHTML - full HTML inside.</li>
+        <li>.style - change CSS dynamically.</li>
+        <li>.classList.add()/ .remove() = manage css classes.</li>
+        <li>.setAttribute() / .getAttribute() - manage attributes like src, href.</li>
+    </ul>
+     <button id="btn" class="ml-10 rounded-sm color-stone-50 bg-sky-600 p-2">click here</button>
+
+     <p id="message" class="text-center">Old Message</p>
+     <button class="ml-10 rounded-sm color-stone-50 bg-sky-600 p-2" onclick="changeMessage()">Change</button>
+    <br>
+    <br>
+     <p id="secret">I am hidden now</p>
+     <button class="ml-10 rounded-sm color-stone-50 bg-sky-600 p-2" onclick="toggle()">Toggle</button>
+
+
+
+
+    <script>
+        const btn = document.querySelector("#btn");
+        // btn.addEventListener("click", () => {
+        //     btn.textContent = "Button Clicked!";
+        // });
+
+        btn.addEventListener("click", function(){
+            btn.textContent = "Button Clicked!";
+        });
+
+        // const newDiv = document.createElement("div");
+        // newDiv.textContent = "Hello";
+        // document.body.appendChild(newDiv);
+        // document.body.removeChild("newDiv");
+
+        function changeMessage() {
+            document.getElementById("message").innerHTML = "New Message";
+        }
+
+
+
+        // toggle function
+        function toggle() {
+            const el = document.getElementById("secret");
+
+            if (el.style.display === "none") {
+                el.style.direction = "block";
+            } else {
+                el.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
