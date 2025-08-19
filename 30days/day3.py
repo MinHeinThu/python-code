@@ -37,5 +37,3 @@ while True:
                  break
         else:
              print('You guess is not valid')
-                
-
