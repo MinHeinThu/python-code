@@ -8,28 +8,29 @@ if length >= 8:
 
     print('''Choose character set for password from these :
         1. Digits
-        2. Letters 
-        3. Special characters
-        4. Exit''')
+        2. Uppercase letter
+        3. Lower letter
+        4. Special characters
+        5. Exit''')
 
     characterList = ''
-
     while (True):
         try:
             choice = int(input('Pick a number: '))
             if (choice == 1):
-                characterList += string.ascii_letters
-            elif (choice == 2):
                 characterList += string.digits
+            elif (choice == 2):
+                characterList += string.ascii_uppercase
             elif (choice == 3):
-                characterList += string.punctuation
+                characterList += string.ascii_lowercase
             elif (choice == 4):
+                characterList += string.punctuation
+            elif (choice == 5):
                 break
             else:
                 print("Please pick a valid option!")
         except ValueError:
             print("You pick is not number")
-
     password = []
     for i in range(length):
         randomchar = rd.choice(characterList)
