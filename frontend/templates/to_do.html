@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="/frontend/static/css/to-do.css">
+</head>
+<body>
+    <h1 class="main-heading">To-Do List</h1>
+    <div id="task-region">
+        <div class="task-add-field">
+           <input id="task" type="text" placeholder="Enter your task..."><br>
+           <p id="warning"></p><br>
+           <button id="addTask">Add task</button> 
+        </div>
+        <div class="task-show-field">
+            <h1 class="list-heading">The Task List Will Show Here</h2>
+            <ul id="listTask">
+            </ul>
+            <button id="deleteTask">Delete task</button> 
+        </div>
+    </div>
+    <script>
+        const task = document.getElementById("task");
+        const addTaskBtn = document.getElementById("addTask");
+        const listTask = document.getElementById("listTask");
+        const p = document.getElementById("warning");
+
+        tasks = [];
+
+        addTaskBtn.addEventListener(("click"), function(){
+            if (task.value === "") {
+                p.textContent = "Task invalid";
+                p.style.color = "red";
+                return
+            } else {
+                p.textContent = "";
+                const li = document.createElement("li");
+                li.textContent = task.value;
+                listTask.appendChild(li);
+                tasks.push(li.textContent)
+                task.value= "";
+                return
+            }
+            
+        });
+
+    const deleteTask = document.getElementById("deleteTask");
+    deleteTask.addEventListener(("click"), (number) => {
+        console.log(tasks)
+    })
+
+    </script>
+</body>
+</html>

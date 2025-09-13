@@ -12,7 +12,7 @@ if length >= 8:
         3. Lower letter
         4. Special characters
         5. Exit''')
-
+    
     characterList = ''
     while (True):
         try:
