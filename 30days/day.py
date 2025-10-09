@@ -1,7 +1,7 @@
 # Day 1 Project: Hello World with User input
 """
 Goal
--learn hot to print output 
+-learn hot to print output
 - learn how to take input from the user
 - Practice basic systax and running Python code
 """
@@ -18,4 +18,3 @@ try:
 except ValueError:
     print('Age should be the number!')
 # for i in range(3):
-
